@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('admins', function (Blueprint $table) {
             $table->id();
+
+            $table->string('name');
+            $table->string('telephone');
+            $table->string('location');
+            $table->string('slug');
+            $table->string('photo');
+            $table->softDeletes(); // Assuming soft deletes are used
+
             $table->timestamps();
         });
     }
